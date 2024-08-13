@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    background-color: #000;
+    font-family: cursive;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.loading div {
+    animation-name: word-loading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+
+}
+
+@keyframes word-loading {
+    0% {
+        margin: 0;
+        color: white;
+    }
+
+    100% {
+        margin: 0;
+        color: transparent;
+    }
+
+
+}
+
+.l {
+    color: white;
+    animation-play-state: paused;
+}
+
+.o {
+    animation-delay: .5s;
+
+}
+
+.a {
+    animation-delay: 1s;
+}
+
+.d {
+    animation-delay: 1.5s;
+}
+
+.i {
+    animation-delay: 2s;
+}
+
+.n {
+    animation-delay: 2.5s;
+}
+
+.g {
+    animation-delay: 3s;
+}

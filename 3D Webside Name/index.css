@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+  }
+  
+  .socList{
+    list-style-type: none;
+    display: flex;
+    position: relative;
+  }
+  .socList li a{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    border-radius: 2x;
+    color: #111;
+    margin: 20px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: 200ms;
+  }
+  .socList li a i{
+    transform: translateZ(20px);
+    transition: 350ms;
+  }
+  .socList li a:hover{
+    color: #fff;
+  }
+  .socList li a:hover>i{
+    transform: scale(1.5);
+  }
+  .facebook:hover{
+    background-color: #160080;
+  }
+  .globe:hover{
+    background-color: #fd0053;
+  }
+  .socList li:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 700;
+    pointer-events: none;
+    opacity: 0;
+    transition: 250ms ease-in;
+  }
+  .socList li:hover:before{
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*popup setting*/
+  
+  
+  .popWrpr{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    transition: 300ms;
+  }
+  .popWrpr.active{
+    display: block;
+  }
+  .popWrpr .popBg{
+    background-color: rgba(0,0,0,0.45);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 250ms;
+  }
+  .popWrpr.active .popBg{
+    opacity: 1;
+  }
+  .popContent{
+    width: 100%;
+    max-width: 380px;
+    margin: 10px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    position: relative;
+    transition: all 300ms;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  .popWrpr.active .popContent{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 300ms;
+  }
+  .popWrpr .profileBtn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: #00098a;
+    color: #fff;
+    margin-top: 15px;
+    transition: 250ms;
+  }
+  .popWrpr .profileBtn:hover{
+    background-color: #fff;
+    color: #00098a;
+  }
+  .popWrpr .closePop{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #00098a;
+    color: #fff;
+    cursor: pointer;
+  }
